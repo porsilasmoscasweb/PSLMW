@@ -1,0 +1,346 @@
+*{padding: 0;margin: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*:focus {outline: none;}
+html{font-family: Helvetica, Arial, sans-serif; font-size: 13px,}
+body {color: #666; font-family: Helvetica, Arial, sans-serif; font-size: 13px;width: 100%;margin: 0 auto;background:#1c1c1c url(../img/main-bg.png)}
+a {color: #444;text-decoration: none;}
+a:hover {color: #ccc;}
+h1 {font: 1.7em;line-height: 110%;color: #000;}
+h1, h2, h3 {color: #000; text-transform:uppercase;}
+h4 {padding: 0;margin: 0;font-size: 150%;}
+h3 {color: rgba(0,0,0,.8); text-transform:uppercase; font: 400 16pt/23pt 'Voltaire'; width:100%;}
+hr {position:relative; width:50px; height:5px; background:rgba(0,0,0,.8); border:none; margin:5px 0;}
+p {margin:0; line-height:15pt;}
+ul {list-style-type:none;}
+
+img{border:none}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+/* Let's get this party started */
+::-webkit-scrollbar { background:#ffffff; width: 12px; }
+/* Track */
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }
+/* Handle */
+::-webkit-scrollbar-thumb {background: #68FFD4; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+::-webkit-scrollbar-thumb:window-inactive {background: #68FFD4;}
+::selection{ background: #68FFD4; }
+::-moz-selection{ background: #68FFD4;}
+
+ @font-face {font-family: 'Voltaire';src: url('http://www.porsilasmoscasweb.com/css/Voltaire/Voltaire-Regular.eot');}
+@font-face {font-family: 'Voltaire';src: url('http://www.porsilasmoscasweb.com/css/Voltaire/Voltaire-Regular.woff') format('woff'),url('http://www.porsilasmoscasweb.com/css/Voltaire/Voltaire-Regular.svg#Voltaire') format('svg');}
+
+
+/************************************************************************************
+HEADER
+*************************************************************************************/
+header{position: fixed; top:0px; width:100%; height:50px;background:#1c1c1c; margin-bottom:70px; border-bottom:3px solid #ccc; z-index:200;}
+/************************************************************************************
+LOGO
+*************************************************************************************/
+#logo { display:none; width:25%; float:left;}
+.logo a { height:100px; background:url(../img/logo/PSLMW-Full.png) no-repeat;}
+
+/************************************************************************************
+NAV
+*************************************************************************************/
+nav {width: 510px;margin:0 auto; padding:0; z-index:1000000}
+nav ul {list-style: none;overflow: hidden;}
+
+nav ul li a {color: #fff;display: block;float: left;text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.1); font: 400 16pt/23pt 'Voltaire';padding: 10px;text-align: center;text-decoration: none;text-transform: uppercase;width:100px;
+-webkit-transition: background 0.5s ease;
+-moz-transition: background 0.5s ease;
+-o-transition: background 0.5s ease;
+-ms-transition: background 0.5s ease;
+transition: background 0.5s ease;}
+
+#nav ul li a:hover, #nav ul li a.current {color:#68FFD4;}
+
+/************************************************************************************
+NAV - FILTER
+*************************************************************************************/
+
+.navFilter{ position:fixed; top:0; width:250px; height:100%;background:rgba(0,0,0,.8) url(../img/main-bg.png); right:-249px; z-index:200;
+-webkit-transition: all .3s ease;
+-moz-transition: all .3s ease;
+-o-transition: all .3s ease;
+-ms-transition: all .3s ease;
+transition: all .3s ease;}
+.navFilter span.listButton { position:absolute; margin:-25px 0 0 -50px; top:50%; width:50px; height:50px; background:rgba(255,255,0,.8) url(../img/icon-item.png) no-repeat 4px -233px; border:2px solid rgba(255,255,255,.8); border-right:none; box-shadow:0 0 5px rgba(0,0,0,.6), inset 0 0 5px rgba(0,0,0,.6); cursor:pointer;}
+.navFilter:hover {right:0;}
+
+.btn {position: relative; font: 12pt/20pt 'Voltaire', Helvetica; color: #fff;background: rgba(255,255,255,.3);cursor: pointer;margin:0; text-transform:capitalize;letter-spacing: 0px; border:none; padding:0; width:100%; height:25%; text-align:center; float:left; overflow:hidden; /*box-shadow:0 0 5px rgba(0,0,0,.6), inset 0 0 5px rgba(0,0,0,.6); border:2px solid rgba(255,255,255,.8);*/z-index:11 ;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;}
+
+.btn:after {content: ""; position: absolute; transition: all 0.5s ease-in-out 0s; background: none repeat scroll 0 0 rgba(0,255,255,.7); height: 0%;left: 50%; top: 50%;transform: translateX(-50%) translateY(-50%) rotate(45deg);-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);width: 200%;z-index:-1;}
+.btn:hover:after{ height: 350%; }
+
+.active { background: rgba(0,255,255,.8);}
+.active:hover { background: transparent;}
+
+.degradientBox { position:absolute; width:1px; height:100%; left:0px; z-index:999; top:0;
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 25%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.75) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(25%,rgba(255,255,255,0.75)), color-stop(50%,rgba(255,255,255,1)), color-stop(75%,rgba(255,255,255,0.75)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */}
+
+/************************************************************************************
+CONTAINER HOME
+*************************************************************************************/
+.wrapper{margin:0; padding:0; position:relative; width:100%; height:100%; top:50px; overflow-x:hidden}
+
+.wrapper ul.image-grid li{display:none; width: 33.3%; background: transparent;float: left; margin:0;}
+.wrapper ul.image-grid li > a, .wrapper ul.image-grid li > a img{position: relative; width:100%; height:auto; display:block;}
+
+.wrapper ul.image-grid li > a span {position: absolute;width: 100%;height: 100%; bottom:0; padding:10px 20px;left:0;background:transparent;border:none; opacity:.9; text-align:center; color:transparent; font-size:8pt; 
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;}
+.wrapper ul.image-grid li > a:hover span{ color:#666;}
+.wrapper ul.image-grid li > a h4{ font-size:18pt; line-height:12pt; margin-top:35%; }
+
+/************************************************************************************
+Project
+*************************************************************************************/
+
+#wrapperProject{position:relative; float:left; width:35%; height:auto; margin:0 1% 0 2%;}
+
+.logo-project{ position:relative; width:100%; text-align:center; margin:110px 0 20px 0;}
+
+.projectSocial{width:100% !important; height:auto; margin:0; display:inline-block;}
+.projectSocial ul li a{position:relative; float:left !important; padding:8px 10px; width:50%; border:2px solid #CCC; text-align:center; text-transform:uppercase; color:#fff; font:14pt 'Voltaire', Helvetica, sans-serif; background:none; cursor:pointer; display:block;  box-shadow: inset 0 0 5px rgba(0,0,0,.6);}						
+
+.projectSocial ul li a.twitter { border-left:none;}
+
+.projectSocial ul li a.facebook:after {background: none repeat scroll 0 0 rgba(60,89,155,.8); }
+.projectSocial ul li a.twitter:after {background: none repeat scroll 0 0 rgba(50,204,255,.8); border-left:none;}
+.projectSocial ul li a.facebook, .projectSocial ul li a.twitter {overflow:hidden; }
+.projectSocial ul li a.facebook:after, .projectSocial ul li a.twitter:after{content: ""; position: absolute; transition: all 0.5s ease-in-out 0s; height: 0%;left: 50%; top: 50%;transform: translateX(-50%) translateY(-50%) rotate(45deg);-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);width: 200%;z-index:-1;}
+.projectSocial ul li a.facebook:hover:after, .projectSocial ul li a.twitter:hover:after{ height: 800%; }
+
+#contProject{padding:15px 15px 35px 15px; margin-top:10px; border:2px solid #fff; background: url(../img/line.png)rgba(255,255,255,.9);
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;}
+#contProject p {margin:10px 0;}
+.contProjectFloat{ position:relative; width:100%; text-align:center; display:inline-block;}
+.forty {position:relative; float:left; width:40px; height:40px; padding:5px; margin:10px 10px 10px 0; background: transparent url(../img/icon-item.png) no-repeat; display:block;}
+
+.print:after,.media:after, .sing:after, .shirt:after, .shop:after, .tv:after{ position:absolute; width:40px; top:40px; display:block; color:#000; text-transform:capitalize; text-align:center; }
+
+	.print{ background-position: 5px 0;}
+	.print:after {content:"print";}
+	.media{ background-position: 5px -40px;}
+	.media:after { content:"media"; }
+	.sing{ background-position: 5px -80px;}
+	.sing:after { content:"sing";}
+	.shirt{ background-position: 5px -120px;}
+	.shirt:after { content:"clothes";}
+	.shop {background-position: 5px -160px;}
+	.shop:after { content:"shop";}
+	.tv{ background-position: 5px -200px;}
+	.tv:after { content:"tv"; }
+
+#more { visibility:hidden; font:14pt 'Voltaire', Helvetica, sans-serif; text-transform:uppercase; cursor:pointer;margin:10px 0; position:relative;}
+input[type=checkbox] {clip: rect(0 0 0 0); position: absolute;}
+[for="read_more"] span {position: absolute; left: 0; width: 100%; text-align: center; padding:10px 0; border:2px solid #ccc; cursor:pointer;  box-shadow: inset 0 0 5px rgba(0,0,0,.6);color:#000; background:rgba(255,255,0,.7);
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;}
+[for="read_more"]:hover span {background: rgba(0,255,255,.8);color:#FFF;}
+[for="read_more"] span:last-of-type {display: none;visibility: hidden;}
+input[type=checkbox]:checked ~ [for="read_more"] span:first-of-type {display: none;visibility: hidden; }
+input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {display: block;visibility: visible;background: rgba(0,255,255,.8); color:#FFF;}
+
+.infoHidden{ display:block; visibility:inherit;}
+
+.imgProject { position:relative; float:left; width:59%;background:transparent; border:2px solid #fff; margin:0 2% 2% 1%;}
+.imgProject img{ position:relative; width:100%; height:auto; padding:5px;}
+
+/************************************************************************************
+CONTAINER LIST
+*************************************************************************************/
+.listProjects::-webkit-scrollbar{ width: 0px; }
+.listProjects{margin:0; padding:10px; position:relative; width:100%; height:100%; overflow:auto;}
+
+.listProjects li{ width: 100%; background: transparent;float: left; margin:0 0 10px 0;}
+.listProjects li > a, .listProjects li > a img{position: relative; width:100%; height:auto; display:block;}
+
+.listProjects li > a span {position: absolute;width: 100%;height: 100%; bottom:0; padding:10px 20px;left:0;background:transparent;border:none; opacity:.9; text-align:center; color:transparent; font-size:8pt;
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;}
+.listProjects li > a:hover span{ color:#666;}
+.listProjects li > a h4{ font-size:12pt; line-height:12pt; margin-top:35%; }
+
+/************************************************************************************
+YOUTUBE - MOTION
+*************************************************************************************/
+#youtube-Fullscreen{position:fixed;width:100%; height:100%; margin:0; padding:0; top:0; display:none;}
+.youtubeImg{ position:fixed; width:100%; height:100%; top:0; padding:0; margin:0; text-align:center; display:block; z-index:1;}
+.youtubeImg img{ position:fixed; width:100%; height:100%; display:inline-block; z-index:0;}
+
+.pointBG{ position:fixed; background: rgba(0,0,0,.5) url(../img/main-bg.png); width:100%; height:100%; z-index:-1}
+
+.youtubeImg h3 { position:relative; font:40pt/50pt 'Voltaire', Helvetica Neue, Helvetica, Arial, sans-serif; text-transform:uppercase; color:rgba(255,255,255,8); letter-spacing:5pt; margin:20% 0 0 0 ;  text-shadow: 4px 3px 1px rgba(0,0,0,.5);}
+.youtubeImg p {color:rgba(255,255,255,1); letter-spacing:1pt; font-weight:100; padding:0px 0 10px 0; font:10pt/14pt Gotham, Helvetica Neue, 'Helvetica', Arial, sans-serif; margin:15px auto; width:65%; text-shadow: 2px 1.5px 1px rgba(0,0,0,.9);}
+
+#youtubePlay { position:relative; width:25%; height:auto; margin:10px auto; padding:5px 0; background:rgba(255,0,0,.5); color:white; display:block; cursor:pointer; z-index:1;overflow:hidden; border:2px solid white; text-align:center; font:20pt 'Voltaire'; text-transform:uppercase;box-shadow:0 0 8px rgba(0,0,0,.8), inset 0 0 8px rgba(0,0,0,.8); z-index:20;}
+#youtubePlay:after {content: ""; position: absolute; transition: all 0.5s ease-in-out 0s; background: none repeat scroll 0 0 rgba(0,255,255,.7); height: 0%;left: 50%; top: 50%;transform: translateX(-50%) translateY(-50%) rotate(45deg);-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);width: 200%;z-index:-1;}
+#youtubePlay:hover:after{ height: 950%; }
+
+.socialMotion {position:fixed; width:50px !important; top:50%; left:0; margin:-49px 0; z-index:20;}
+.socialMotion ul li a{ position:relative; width:45px; height:45px; margin:3px 0; border-left:0px !important;}
+
+/************************************************************************************
+CONTACT
+*************************************************************************************/
+
+.error{background: #BC1010; color:white; padding: 5px 10px; position:relative; top:5px;}
+.error:before{border-color: transparent transparent #BC1010 transparent;border-style: solid;border-width: 6px 8px;content: "";display: block;height: 0;position: absolute;top: -12px;width: 0;}
+
+.result_ok{ position:relative; overflow:hidden; float:left; background:none; border:2px solid #fff; width:45%; height:auto; text-align:center; color:#fff; text-transform:uppercase; line-height:30pt; font-size:11px;}
+
+/* AZIENDA
+******************************************************************/
+.block-text{width:100%; text-align:center; top:50%; margin-top:-200px;position:absolute; width:100%; }
+.block-text h1 span{border-bottom:1px solid #fff;line-height:90px; display:inline-block; }
+.block-text .and{background: url(../images/and.png) no-repeat center; width:70px; height:96px; display:inline-block; margin-bottom:-25px;border-bottom:none;}
+.description-section{font-size:20px; margin:50px auto 0;width:50%; }
+.title-section h3, .title-section div{font-size:15px;letter-spacing:1px;}
+.title-section h3 span, .title-section div span{display:inline-block; color:#FFF;}
+
+.contactSocial{width:260px !important; height:70px; margin:10px auto;}
+.contactSocial ul{ list-style:none; }
+.contactSocial ul li a{position:relative; float:left !important; padding:8px 10px;width: 55px; border:2px solid #CCC; text-align:center; text-transform:uppercase; color:#ccc; font:14pt 'Voltaire', Helvetica, sans-serif; background:none; margin:5px;}						
+.contactSocial ul li a:hover{color:#666}
+
+/* CONTACT
+******************************************************************/
+
+#contact-cont           {width:100%; padding-top:150px;}
+#contact-cont .title-section    {text-align:center; text-transform:uppercase; font-family:'Voltaire', Helvetica, sans-serif;}
+#contact-cont .title-section h1 {font-size:80px;color:#ccc; font-family:'Voltaire', Helvetica, sans-serif;}
+.address                {text-align:center; margin:50px 0;}
+.address h3             {margin-bottom:20px;color:#ccc;}
+.address p              {line-height:21px;}
+
+.formContact            {width:75%; margin:70px auto 100px;   }
+.formContact label {width:100%; color:#fff;font-size:16px; text-transform:uppercase; line-height:33pt;}
+.formContact input[type=text] {letter-spacing:1px; background:none; font-size:13px; color:#fff; width:100%; border:1px solid #fff; margin-bottom:10px; height:44px;padding-left:30px; text-transform:uppercase;}
+.formContact input[type=text]:focus, .formContact textarea:focus {color:#fff; }
+.formContact textarea   {background:none;  margin-bottom:20px; color:#fff;font-size:16px; width:100%; height:200px;  border:1px solid #fff;padding-left:30px;padding-top:20px;font-family: 'Voltaire'; letter-spacing:1px; }
+
+.invia{cursor:pointer; background:none; text-align:center; color:#fff; text-transform:uppercase;width:100%; height:100%; border:none;}
+.invia_cont{cursor:pointer; position:relative; overflow:hidden; cursor:pointer; float:right;background:none; border:2px solid #fff; width:45%; height:auto; text-align:center; color:#fff; text-transform:uppercase; line-height:30pt; padding:8px 0;}
+.invia_cont:after {content: ""; position: absolute; transition: all 0.5s ease-in-out 0s; background: none repeat scroll 0 0 #FFFFFF; height: 0%;left: 50%; top: 50%;transform: translateX(-50%) translateY(-50%) rotate(45deg);-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);width: 200%;z-index:-1;}
+.invia_cont:hover .invia {color:#666;}
+.invia_cont:hover:after{ height: 1215%; }
+
+/************************************************************************************
+CLIENT
+*************************************************************************************/
+section {text-align: center; margin-top:130px;}
+
+.client {width: 300px;height: 300px;position: relative;background: rgba(0,0,0,0);display: inline-block;margin: 10px;cursor: pointer;color: #fff;
+-webkit-transition: background 0.4s; overflow:hidden;
+transition: background 0.4s;}
+.client a{ color:#FFF;}
+.client img { position:relative; width:100%; height:auto; display:inline-block;}
+.client span {display: block;font-weight: 400;text-transform: uppercase;letter-spacing: 1px;font-size: 13px;padding: 5px;}
+.client span.country {color:rgba(0,255,255,.8);}
+
+.client svg {position: absolute;top: 0;left: 0;}
+.client svg line {stroke-width: 3;stroke: #ecf0f1;fill: none;-webkit-transition: all .4s ease-in-out;transition: all .4s ease-in-out;}
+
+.client svg line.top,.client svg line.bottom {stroke-dasharray: /*top left*/330 /*top right*/240; }
+.client svg line.left,.client svg line.right {stroke-dasharray: /*left bottom*/330 /*right bottom*/240;}
+
+.client:hover {background: rgba(0,0,0,0.4); }
+
+.client:after {content: ""; position: absolute; transition: all 0.5s ease-in-out 0s; background: none repeat scroll 0 0 rgba(0,155,155,.5); height: 0%;left: 50%; top: 50%;transform: translateX(-50%) translateY(-50%) rotate(45deg);-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);width: 200%;z-index:-1;}
+.client:hover:after{ height: 415%; }
+
+.client:hover svg line {stroke-width: 10; stroke: rgba(0,255,255,.8);}
+	.client:hover svg line.top {-webkit-transform: translateX(-300px);transform: translateX(-300px);}
+	.client:hover svg line.bottom {-webkit-transform: translateX(300px);transform: translateX(300px);}
+	.client:hover svg line.left {-webkit-transform: translateY(300px);transform: translateY(300px);}
+	.client:hover svg line.right {-webkit-transform: translateY(-300px);transform: translateY(-300px);}
+	
+/************************************************************************************
+Error
+*************************************************************************************/
+#error{ width:100%; position:relative; text-align:center; margin:7% 0 0 -3%;}
+#error div img {width:80%; }
+#error div.quatre img{ width:60%;}
+#error div {width:50%; float:left; text-transform:uppercase; text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.2); font: 400 20pt 'Voltaire';}
+.quatre{margin:8% 0 0 -3%;}
+
+.phrase { font-size:18pt; font-weight:bold; text-transform:uppercase; padding:15px 20px; background:transparent !important; color:#68FFD4;}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* reset cols to 3-column */
+@media screen and (max-width: 840px) {
+.wrapper ul.image-grid li {width: 50%!important;}
+}
+
+/* reset cols to 2-column */
+@media screen and (max-width: 720px) {
+.wrapper ul.image-grid li {width: 50%!important;}
+
+#wrapperProject { width: 90%; margin:0 5% 10px 5%; border:none;}
+.imgProject{ width: 90%; margin:45px 5% 5% 5%;}
+
+.infoHidden{ display:none;}
+#more { visibility:inherit;}
+
+#error{text-align:center; margin:0 0 0 -10%;}
+#error div {width:100%; float:none;}
+.quatre{margin:0 0 0 10%; padding-bottom:60px;}
+}
+
+/* reset cols to fullwidth */
+@media screen and (max-width: 560px) {
+header{position:relative; height:auto;padding-top:10px; margin-bottom:0px; background:#ccc url(../img/main-bg.png) !important;}
+#logo{ display:block; width:100%; height:250px; float:none; background:url(../img/logo/PSLMW.png) no-repeat center ; margin-bottom:10px;}
+.logo { display:none;}
+#nav {width: 100%;margin:0; float:none; padding:10px 0 0 0 ;}
+#nav li a {width: 25%;font: 400 12pt/1.4 'Voltaire', Helvetica, Verdana, Arial, sans-serif;text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.1); padding:12px; color:#fff; margin:0;}
+#nav li a:hover {color: rgba(0,255,255,1);}
+#nav ul li a.current {color: rgba(0,255,255,1);}
+#nav{ background:#1C1C1C; padding:0;}
+
+.logo-project{margin:30px 0 20px 0;}
+
+.wrapper ul.image-grid li {width: 90%!important; margin:5%;}
+
+.hundred { width:150px; right:-149px}
+
+#youtube-Fullscreen{position:relative; width:90%; height:300px; display:block; margin:5%;}
+.youtubeImg{ position:relative; margin:-50px 0 30px 0;}
+.pointBG, #youtubePlay{ display:none;}
+.bigImgYou{background:transparent !important;}
+.youtubeImg h3 {font:20pt/30pt 'Voltaire', Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+.socialMotion {position:fixed; width:50px !important; top:90%; left:0; margin:-49px 0; z-index:20;}
+.socialMotion ul li a{ position:relative; width:45px; height:45px; margin:3px 0; border-left:0px !important;}
+
+section {margin-top:40px;}
+
+#contProject h1{ color: #ccc; font:40pt/50pt 'Voltaire', Helvetica, sans-serif; text-align:center; display:none;}
+#contact-cont { padding-top:80px;}
+}

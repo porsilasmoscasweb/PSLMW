@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /wish-ticket/
+Disallow: /css/
+Disallow: /2012/
+Disallow:/wish-ticket/
+Disallow: /google/
+Disallow: /img/
+Disallow: /js/
+Disallow: /logs/
+Disallow: /404/
+Disallow: /2013/
+Disallow: /dogwood-slider/
+Disallow: /dogwood-navidad/
+Disallow: /Garriga/
+Disallow: /pdf/
+
+Sitemap: http://www.porsilasmoscasweb.com/sitemap.xml
