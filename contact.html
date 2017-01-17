@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PSLMW - contact</title>
+
+
+<!-- META -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- CSS -->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+
+<!-- JQUERY-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="s/jquery-ui-1.10.4.custom.js"></script>
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+<script>$(document).ready(function(){$("#youtubePlay").click(function(){$("#youtube-Fullscreen").slideToggle(0);});});</script>
+<script>$(document).ready(function(){$("#youtubePlay").click(function(){$(".youtubeImg").slideToggle(300);});});</script>
+<script>$(document).ready(function(){$("#read_more").click(function(){$(".infoHidden").slideToggle(300);});});</script>
+
+<script type="text/javascript">
+$(function () {
+var filterList = {
+    init: function () {
+        $('#list').mixitup({
+        animation:{
+            enable: true,
+            effects: 'translateZ(-360px) stagger(34ms) scale(0)',
+            <!--fade, scale, translateX, translateY, translateZ, rotateX, rotateY, rotateZ, stagger-->
+            duration: 300,
+            easing: 'ease', <!--ease. snap-->
+            perspectiveDistance: '3000px',
+            perspectiveOrigin: '50% 50%',
+            queue: true,
+            queueLimit: 1,
+            animateChangeLayout: false,
+            animateResizeContainer: true,
+            animateResizeTargets: false,
+            staggerSequence: null,
+            reverseOut: false,
+        },
+            targetSelector: '.box',
+            filterSelector: '.btn',
+        });
+    }
+};
+filterList.init();
+});
+</script>
+
+<script>
+$(function(){
+  $('a').each(function() {
+    if ($(this).prop('href') == window.location.href) {
+      $(this).addClass('current');
+    }
+  });
+});
+</script>
+
+</head>
+
+<body>
+
+  <header id="header">
+      <div id="logo"></div>
+      <nav id="nav">
+         <ul>
+            <li><a href="index.html">Works</a></li>
+            <li><a href="client.html">Clients</a></li>
+            <li class="logo"><a href="index.html"></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+  </header>
+
+<div id="contact-cont" class="clearfix">
+
+    <div class="title-section">
+        <div>
+            <span>IF YOU HAVE ANY QUESTION </span>
+        </div>
+    <h1>CONTACT US</h1>
+        <div>
+            <span>PLEASE</span>
+        </div>
+    </div>
+    <div class="address">
+        <p>
+            Vic (Barcelona)<br>
+            porsilasmoscasweb@gmail.com <br>
+            +34 688 921 578<br>
+        </p>
+        <div class="contactSocial">
+        	<ul>
+            	<li><a class="invia_cont" href="http://www.linkedin.com/in/pslmw" target="linkedin">in</a></li>
+                <li><a class="invia_cont" href="http://www.behance.net/PSLMW" target="behance">Be</a></li>
+                <li><a class="invia_cont" href="http://www.domestika.org/portfolios/pslmw" target="domestica">Dom</a></li>
+                <li><a class="invia_cont" href="mailto:'info@porsilasmoscasweb.com'" target="gmail">M</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="title-section">
+        <div>
+            <span>IF YOU FEEL MORE COMFORTABLE</span>
+        </div>
+    <h1>WRITE US</h1>
+        <div>
+            <span>WE WILL BE HAPPY ANSWER TO YOU</span>
+        </div>
+    </div>
+
+    <div id="divInput" class="formContact clearfix">
+        <form id="RegisterUserForm" autocomplete="on" enctype="multipart/form-data"  method='POST' action=''>
+            <p><label>Name:</label><input type='text' class='text' name='nom' value=''></p>
+            <p><label>Company:</label><input type='text' class='text' name='Nempresa' value=''></p>
+            <p><label>Email:</label><input type='text' class='text' name='email' value=''></p>
+            <p><label class="textarea">WHAT IS YOUR IDEA:</label><textarea class='text' name='assumpte'></textarea></p>
+            <div class="invia_cont">
+            <p><input type='submit' value='Send Request' class='invia' name='boton'></p>
+            </div>
+        </form>
+	</div>
+    <!-- Form -->
+
+</div>
+<!-- End Container -->
+</body>
+
+</body>
+</html>
