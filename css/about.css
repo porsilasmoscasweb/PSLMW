@@ -23,20 +23,32 @@ box-shadow: 0 0 2px #adadad;
 #timeline article ul li h4{display: block; position: absolute; width:75px; height: 31px;
 /* ANIM =*/ opacity: 0; top: 50%; margin-top: -15px; padding: 8px 0 0 25px;font: 14px/14px "visitAR", Helvetica, Arial, sans-serif; color: #07c19c;
 background: transparent url(../img/about/timeline-ano-bg.png) no-repeat left bottom;
--moz-transition: all 0.4s 0.2s; -webkit-transition: all 0.4s 0.2s; -o-transition: all 0.4s 0.2s; transition: all 0.4s 0.2s; 
+-moz-transition: all 0.4s 0.2s; -webkit-transition: all 0.4s 0.2s; -o-transition: all 0.4s 0.2s; transition: all 0.4s 0.2s;
 }
+
+#timeline article ul li h4.outLeft{
+  background: transparent; text-transform:uppercase; text-weight:bold;
+  margin-left: -225px !important; color:white !important;
+  width:200px !important;
+}
+#timeline article ul li h4.outRight{
+  background: transparent; text-transform:uppercase; text-weight:bold;
+  margin-left: 30px !important; color:white !important;
+  width:200px !important;
+}
+
 #timeline article ul li p{display: block; width: 40%; margin-left: -20px;font: 13px/20px "visitAR", Helvetica, Arial, sans-serif; opacity: 0;
--moz-transition: all 0.5s 0.3s; -webkit-transition: all 0.5s 0.3s; -o-transition: all 0.5s 0.3s; transition: all 0.5s 0.3s; 
+-moz-transition: all 0.5s 0.3s; -webkit-transition: all 0.5s 0.3s; -o-transition: all 0.5s 0.3s; transition: all 0.5s 0.3s;
 }
 p.leftAbout{text-align:right;}
 #timeline article ul li div{display: table; position: absolute; width: 28px; height: 28px;top: 50%; left:50%; margin: -14px;}
 #timeline article ul li div span{display: table-cell; width: 28px; height: 28px;text-align: center; vertical-align: middle;background: #dfdede; opacity: 1;
 -moz-border-radius: 14px; -webkit-border-radius: 14px; border-radius: 14px;
--moz-transition: all 0.7s; -webkit-transition: all 0.7s; -o-transition: all 0.7s; transition: all 0.7s; 
+-moz-transition: all 0.7s; -webkit-transition: all 0.7s; -o-transition: all 0.7s; transition: all 0.7s;
 -moz-transform: scale(0); -webkit-transform: scale(0); -o-transform: scale(0); transform: scale(0);
 }
 #timeline article ul li div img{display: block; position: absolute; width: 20px; height: 20px;left: 4px; top: 4px; opacity: 0;
--moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; 
+-moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s;
 }
 
 .animate h4 img{ width:20px; height:20px; margin:-3px 0 0 5px;}
@@ -89,4 +101,3 @@ p.leftAbout{text-align:right;}
 #timeline article ul li.right h4{ opacity: 1; left:50%; margin-left:-90px;}
 #timeline article ul li p{opacity: 1; margin-left: 5%;}
 #timeline article ul li.right p{opacity: 1; margin-left: 56%;}}
-

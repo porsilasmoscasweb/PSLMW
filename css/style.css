@@ -222,8 +222,8 @@ CONTACT
 .title-section h3, .title-section div{font-size:15px;letter-spacing:1px;}
 .title-section h3 span, .title-section div span{display:inline-block; color:#FFF;}
 
-.contactSocial{width:260px !important; height:70px; margin:10px auto;}
-.contactSocial ul{ list-style:none; }
+.contactSocial{height:70px; margin:10px auto;}
+.contactSocial ul{ list-style:none; display: inline-flex;}
 .contactSocial ul li a{position:relative; float:left !important; padding:8px 10px;width: 55px; border:2px solid #CCC; text-align:center; text-transform:uppercase; color:#ccc; font:14pt 'Voltaire', Helvetica, sans-serif; background:none; margin:5px;}
 .contactSocial ul li a:hover{color:#666}
 
